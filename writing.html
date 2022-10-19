@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing</title>
+  <link rel="stylesheet" href="simple.css">
+  <script src="jquery.js"></script>
+  <script src="writing.js"></script>
+  <style>
+    .container {
+      padding-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <label for="idea-1">Idea 1</label>
+      <input type="text" name="idea-1" id="idea-1">
+    </div>
+    <div>
+      <label for="idea-2">Idea 2</label>
+      <input type="text" name="idea-2" id="idea-2">
+    </div>
+    <div>
+      <label for="theme">Theme</label>
+      <input type="text" name="theme" id="theme">
+    </div>
+    <div>
+      <label for="emotion">Emotion</label>
+      <input type="text" name="emotion" id="emotion">
+    </div>
+    <div>
+      <label for="timer-length">Timer Length</label>
+      <select type="text" name="timer-length" id="timer-length">
+        <option value="5">5 Seconds</option>
+        <option value="60">1 Minute</option>
+        <option value="180">3 Minutes</option>
+        <option value="300" selected="true">5 Minutes</option>
+        <option value="600">10 Minutes</option>
+        <option value="1800">30 Minutes</option>
+        <option value="3600">1 Hour</option>
+      </select>
+    </div>
+    <div>
+      <button id="timer" class="cleared">Start!</button>
+    </div>
+    <div>
+      <label for="lyrics">Lyrics</label>
+      <div>
+        <textarea name="lyrics" id="lyrics" cols="30" rows="10" disabled="true"></textarea>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
