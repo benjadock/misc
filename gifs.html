@@ -1,0 +1,69 @@
+<script type="text/javascript">
+	arrayOfGifs = [
+		["don draper k",						"https://i.imgur.com/Xon2zpL.gif"]
+		,["fillion no words",					"http://i.imgur.com/uYjUuC9.gif"]
+		,["fillion no words as cayde",			"http://i.imgur.com/ZZb3pt9.gif"]
+		,["some big dis",						"http://media.giphy.com/media/cF7QqO5DYdft6/giphy.gif"]
+		,["some big dis, but destiny",			"https://i.giphy.com/media/3o7qEccSvsVHNT17Xi/giphy.webp"]
+		,["jack nicholson nodding",				"http://media.giphy.com/media/S3Ot3hZ5bcy8o/giphy.gif"]
+		,["hippie whoa",						"https://media0.giphy.com/media/SDogLD4FOZMM8/giphy.gif"]
+		,["just do it",							"http://i.imgur.com/I6P6k7d.jpg"]
+		,["blinking guy",						"http://media.giphy.com/media/l3q2K5jinAlChoCLS/200w.gif"]
+		,["why are you boing me",				"https://66.media.tumblr.com/8e170064c752e88ca4a9b472e8afa33c/tumblr_oizlz0lvE61rrkahjo1_r1_540.gif"]
+		,["let me in",							"https://media1.tenor.com/images/a7e004f24af8ca4289fe65803a6580ba/tenor.gif"]
+		,["gyllenhaal disapproves",				"http://replygif.net/i/184.gif"]
+		,["kristen bell laugh then cry",		"https://media3.giphy.com/media/DHsQd6qYt4E2Q/source.gif"]
+		,["obi wan good job",					"https://media.giphy.com/media/l1KsJua7qIQnevGyk/giphy.gif"]
+		,["obama wat",							"https://i.imgur.com/WyHMg1s.gif"]
+		,["john candy no",						"http://media.giphy.com/media/yBXuEb8lC1mqA/giphy.gif"]
+		,["dissapointed shia",					"https://gifimage.net/wp-content/uploads/2017/06/shia-labeouf-clapping-gif-11.gif"]
+		,["letterkenny nice execution",			"http://i.imgur.com/2De77ZM.gif"]
+		,["letterkenny baby",					"https://i.imgur.com/0NtpOYi.gif"]
+		,["letterkenny clean it up",			"https://media1.tenor.com/images/8c5fb83fd4ab506f64eb32eb3527f6c8/tenor.gif?itemid=13301682"]
+		,["Indian Gameshow",					"https://media.giphy.com/media/l3q2Z6S6n38zjPswo/giphy.gif"]
+		,["letterkenny can confirm",			"https://media3.giphy.com/media/2A4BGNtYCtpB5HgZjN/giphy.gif"]
+		,["letterkenny allegedly",				"https://media0.giphy.com/media/3ohzdMvc1w2VlFOpRC/giphy.gif"]
+		,["coach hines dissapoint",				"http://media.giphy.com/media/13IoDd5cNnJOjS/giphy.gif"]
+		,["monkey with regret",					"http://i.imgur.com/PwM8Buy.gif"]
+		,["drum monkey",						"http://media.giphy.com/media/ChDyoCjuUnuMw/giphy.gif"]
+		,["ron swanson yuhs",					"http://i.imgur.com/J0xeeru.gif"]
+		,["ok computer",						"http://media1.tenor.com/images/ca668ad677ec86bcfd55691ee853d603/tenor.gif?itemid=11766062"]
+		,["pc toss",							"http://i0.kym-cdn.com/photos/images/original/001/372/654/fe5.gif"]
+		,["confused larry david",				"https://i.imgur.com/A356jiI.gif"]
+		,["jeremy clarkson p45 close",			"https://i.imgur.com/fLCfDAq.gif"]
+		,["triggered advanced",					"https://media.giphy.com/media/ZEVc9uplCUJFu/giphy.gif"]
+		,["earl back away slowly",				"http://media.giphy.com/media/vxdpsQNMFLT3RuMeYX/giphy.gif"]
+		,["poirot back away slowly",			"https://i.imgur.com/3kMRpZd.gif"]
+		,["Woah turning",						"http://media.giphy.com/media/Lcn0yF1RcLANG/giphy.gif"]
+		,["ermafergngerd",						"https://i.imgur.com/ooviOdC.gif"]
+		,["michael scott no",					"https://media.giphy.com/media/12XMGIWtrHBl5e/giphy.gif"]
+		,["yes yes yes",						"https://media.giphy.com/media/L9kwXOK00OJGM/giphy.gif"]
+		,["vegeta yes",							"https://media.tenor.com/images/16cb3a77799cf614bdba77d6430ff4fd/tenor.gif"]
+		,["brutal savage rekt",					"https://media1.giphy.com/media/zgzzwU2GSOW08/source.gif"]
+	];
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		for (gif in arrayOfGifs) {
+			var toAppend = `<div class="image" data-src="` + arrayOfGifs[gif][1] + `" title="` + arrayOfGifs[gif][0] + `" style="background-image: url('` + arrayOfGifs[gif][1] + `');"></div>`
+			$("#gifsGoHere").append(toAppend);
+		}
+		$(".image").click(function() {
+			var $temp = $("<input>");
+			$("body").append($temp);
+			$temp.val($(this).attr("data-src")).select();
+			document.execCommand("copy");
+			$temp.remove();
+		});
+	});
+</script>
+<style media="screen">
+	body::-webkit-scrollbar {width: 0em;}
+	* {background-color: #000; padding: 0; margin: 0;}
+	div.image {height: 20vh; width: 12.5vw; display: inline-block; background-repeat: no-repeat; background-position: center; background-size: cover;}
+	@media(max-width: 1020px) {
+		div.image {height: 50vh; width: 50vw; display: inline-block; background-repeat: no-repeat; background-position: center; background-size: cover;}
+	}
+</style>
+<div id="gifsGoHere"></div>
