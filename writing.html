@@ -5,34 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Writing</title>
-  <link rel="stylesheet" href="simple.css">
+  <link rel="stylesheet" href="writing-style.css">
   <script src="jquery.js"></script>
   <script src="writing.js"></script>
-  <style>
-    .container {
-      padding-top: 80px;
-    }
-  </style>
 </head>
 
 <body>
   <div class="container">
-    <div>
-      <label for="idea-1">Idea 1</label>
-      <input type="text" name="idea-1" id="idea-1">
+    <h1>Timed Lyric Writer</h1>
+    <div class="row">
+      <div class="row-item">
+        <label for="idea-1">Idea 1</label>
+        <input type="text" name="idea-1" id="idea-1">
+      </div>
+      <div class="row-item">
+        <label for="idea-2">Idea 2</label>
+        <input type="text" name="idea-2" id="idea-2">
+      </div>
     </div>
-    <div>
-      <label for="idea-2">Idea 2</label>
-      <input type="text" name="idea-2" id="idea-2">
+    <hr />
+    <div class="row">
+      <div class="row-item">
+        <label for="theme">Theme</label>
+        <input type="text" name="theme" id="theme">
+      </div>
+      <div class="row-item">
+        <label for="emotion">Emotion</label>
+        <input type="text" name="emotion" id="emotion">
+      </div>
     </div>
-    <div>
-      <label for="theme">Theme</label>
-      <input type="text" name="theme" id="theme">
-    </div>
-    <div>
-      <label for="emotion">Emotion</label>
-      <input type="text" name="emotion" id="emotion">
-    </div>
+    <hr />
     <div>
       <label for="timer-length">Timer Length</label>
       <select type="text" name="timer-length" id="timer-length">
@@ -45,6 +47,7 @@
         <option value="3600">1 Hour</option>
       </select>
     </div>
+    <hr />
     <div>
       <button id="timer" class="cleared">Start!</button>
     </div>
@@ -55,6 +58,7 @@
       </div>
     </div>
     <div>
+      <hr />
       <button id="clear-prev" class="hidden">Clear Previous</button>
     </div>
     <div id="prev-lyrics"></div>
