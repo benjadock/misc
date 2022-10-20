@@ -30,7 +30,6 @@ button,
 input,
 select,
 textarea {
-    width: 100%;
     font-size: 20px;
     display: block;
     padding: 10px;
@@ -41,6 +40,7 @@ button,
 input,
 select,
 textarea {
+    width: 100%;
     color: white;
     border: 2px solid rgb(0, 148, 216);
     background-color: rgb(37, 35, 35);
