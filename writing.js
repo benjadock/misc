@@ -2,6 +2,7 @@ $(function () {
   let timer = $('#timer');
   let timeout;
   let lyrics = $('#lyrics');
+  let lyricsContainer = $('#lyrics-container');
   let prevLyrics = $('#prev-lyrics');
   let timerLength = $('#timer-length');
   let clearButton = $("#clear-prev");
@@ -21,6 +22,7 @@ $(function () {
 
   function startTimer() {
     timer.removeClass('cleared').addClass('started');
+    lyricsContainer.removeClass('hidden');
     lyrics.prop('disabled', false).focus();
     updateTimer();
     timeout = setInterval(function () {
@@ -47,6 +49,7 @@ $(function () {
     timer.html('Start!').removeClass('started').addClass('cleared');
     clearButton.removeClass('hidden');
     lyrics.prop('disabled', true);
+    lyricsContainer.addClass('hidden');
     if (lyrics.val().length > 0) {
       addPreviousLyric(lyrics.val());
       storePreviousLyric(lyrics.val());
