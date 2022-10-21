@@ -56,7 +56,7 @@ $(function () {
     }
     lyrics.val('');
     if (ringBell) {
-      new Audio('assets/wwe-bell-single.mp3').play();
+      new Audio('assets/end.mp3').play();
     }
   }
 
