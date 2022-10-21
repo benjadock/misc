@@ -32,7 +32,7 @@ body {
     display: none;
 }
 
-.prev-lyrics {
+#prev-lyrics {
     white-space: pre-line;
 }
 
