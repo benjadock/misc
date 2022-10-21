@@ -5,7 +5,8 @@
 
 body {
     background-image: url('../assets/fall-leaves.jpg');
-    background-color: black;
+    background-position: center;
+    background-color: #653020;
     color: white;
     font-family: RobotoSlab, 'Times New Roman', Times, serif;
     font-size: 20px;
@@ -29,6 +30,10 @@ body {
 
 .hidden {
     display: none;
+}
+
+.prev-lyrics {
+    white-space: pre-line;
 }
 
 label {
