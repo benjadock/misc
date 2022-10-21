@@ -6,6 +6,7 @@
 body {
     background-image: url('../assets/fall-leaves.jpg');
     background-position: center top;
+    background-attachment: fixed;
     background-color: #653020;
     color: white;
     font-family: RobotoSlab, 'Times New Roman', Times, serif;
