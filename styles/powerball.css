@@ -1,0 +1,119 @@
+@font-face {
+    font-family: RobotoSlab;
+    src: url(../assets/RobotoSlab.ttf);
+}
+
+body {
+    background-image: url('../assets/cabin.png');
+    background-position: center top;
+    background-attachment: fixed;
+    background-color: #653020;
+    color: white;
+    font-family: RobotoSlab, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    min-height: 800px;
+}
+
+.number-row,
+.header-row {
+    display: block;
+    margin: 30px 0px;
+}
+
+.ball {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 9001px;
+    color: black;
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 44px;
+}
+
+.chosen.ball {
+    background-color: white;
+}
+
+.power.ball {
+    color: white;
+    background-color: rgba(128, 0, 0, 0.2);
+}
+
+.chosen.power.ball {
+    background-color: rgba(128, 0, 0, 1);
+}
+
+.number-row.winner>.chosen.ball {
+    background-color: goldenrod;
+    animation: color 2s infinite linear;
+    color: black;
+}
+
+.ball-input {
+    background-color: white;
+    border-radius: 9001px;
+    border: none;
+    color: black;
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+    width: 44px;
+}
+
+.power.ball-input {
+    color: white;
+    background-color: rgba(128, 0, 0, 1);
+}
+
+.save-button {
+    display: block;
+    background-color: white;
+    padding: 10;
+    border: none;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.container {
+    margin: auto;
+    max-width: 600px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes color {
+    0% {
+        background: #33CCCC;
+    }
+
+    20% {
+        background: #33CC36;
+    }
+
+    40% {
+        background: #B8CC33;
+    }
+
+    60% {
+        background: #FCCA00;
+    }
+
+    80% {
+        background: #33CC36;
+    }
+
+    100% {
+        background: #33CCCC;
+    }
+}
