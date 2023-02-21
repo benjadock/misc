@@ -1,0 +1,56 @@
+@font-face {
+    font-family: RobotoSlab;
+    src: url(../assets/RobotoSlab.ttf);
+}
+
+body {
+    background-image: url('../assets/fall-leaves.jpg');
+    background-position: center top;
+    background-attachment: fixed;
+    background-color: #1b3843;
+    color: white;
+    font-family: RobotoSlab, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    min-height: 800px;
+}
+
+
+.container {
+    margin: auto;
+    max-width: 600px;
+}
+
+.card {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    user-select: none;
+}
+
+.hidden {
+    display: none;
+}
+
+input,
+select,
+textarea {
+    appearance: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
