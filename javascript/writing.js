@@ -6,6 +6,8 @@ $(function () {
   let prevLyrics = $('#prev-lyrics');
   let timerLength = $('#timer-length');
   let clearButton = $("#clear-prev");
+  let title = $("#title");
+  let extraFields = $("#extra-fields");
   let seconds = 0;
   let storage = window.localStorage;
 
@@ -18,6 +20,10 @@ $(function () {
     storage.clear();
     prevLyrics.html('');
     clearButton.addClass('hidden');
+  });
+
+  title.click(function () {
+    extraFields.toggleClass('hidden');
   });
 
   function startTimer() {
