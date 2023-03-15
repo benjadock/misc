@@ -11,9 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const whiteBalls = localStorage.getItem("whiteballs").split(',').map(Number);
     const powerBall = parseInt(localStorage.getItem("powerball"));
     createChosenNumberRow(whiteBalls, powerBall);
-    const currentDate = new Date();
-    const dateToCheck = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - 10);
-    const filteredData = data.filter(row => new Date(row[8]) > dateToCheck).reverse();
+    const filteredData = data.reverse().slice(0,4);
     filteredData.map(row => {
       const currentRow = { date: row[8], numbers: row[9].split(' ') };
       const date = new Date(currentRow.date).toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
