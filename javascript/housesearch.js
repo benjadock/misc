@@ -14,7 +14,8 @@ function generateNewTabs(address) {
 function openTabs(address, data) {
   let longitude, latitude, address1, address2
   [longitude, latitude] = [data[0]["lon"], data[0]["lat"]]
-  [address1, address2] = address.split(',')[0]
-  window.open(`https://broadbandmap.fcc.gov/location-summary/fixed?addr1=${address1}&addr2=${address2}&zoom=15.00&vlon=${longitude}&vlat=${latitude}`, '_blank')
-  window.open(`https://earth.google.com/web/search/${address}`, '_blank')
+  [address1, address2] = address.split(/,(.*)/s)
+  const container = document.getElementById('container')
+  container.insertAdjacentHTML('beforeend', `<h2><a href="https://broadbandmap.fcc.gov/location-summary/fixed?addr1=${address1}&addr2=${address2}&zoom=15.00&vlon=${longitude}&vlat=${latitude}" target="_blank">FCC Map</a></h2>`);
+  container.insertAdjacentHTML('beforeend', `<h2><a href="https://earth.google.com/web/search/${address}" target="_blank">Google Earth</a></h2>`);
 }
