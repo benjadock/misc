@@ -1,6 +1,6 @@
 $(function () {
   getWords();
-  $('.refresh').click(getWords());
+  $('.refresh').on('click', getWords);
 });
 
 function getWords() {
