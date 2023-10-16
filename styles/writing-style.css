@@ -1,6 +1,6 @@
 @font-face {
-    font-family: RobotoSlab;
-    src: url(../assets/RobotoSlab.ttf);
+    font-family: PlayfairDisplay;
+    src: url(../assets/fonts/PlayfairDisplay.ttf);
 }
 
 body {
@@ -9,7 +9,7 @@ body {
     background-attachment: fixed;
     background-color: #653020;
     color: white;
-    font-family: RobotoSlab, 'Times New Roman', Times, serif;
+    font-family: PlayfairDisplay, 'Times New Roman', Times, serif;
     font-size: 20px;
     word-wrap: break-word;
 }

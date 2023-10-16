@@ -17,10 +17,12 @@ function processWords(data) {
   const nouns = data[0];
   const adjectives = data[1];
   $('.noun').each(function() {
-    $(this).html(nouns[randomIndex(nouns.length)]);
+    const currentNoun = nouns[randomIndex(nouns.length)];
+    $(this).html(currentNoun).prop('href', `https://duckduckgo.com?q=!cambridge ${currentNoun}`);
   });
   $('.adjective').each(function() {
-    $(this).html(adjectives[randomIndex(adjectives.length)]);
+    const currentAdjective = adjectives[randomIndex(adjectives.length)];
+    $(this).html(currentAdjective).prop('href', `https://duckduckgo.com?q=!cambridge ${currentAdjective}`);
   });
 }
 
