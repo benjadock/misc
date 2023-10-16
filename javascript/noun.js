@@ -3,10 +3,10 @@ $(function () {
 });
 
 function getWords() {
-  const nounsFile = fetch('/assets/text/nouns.txt')
+  const nounsFile = fetch('assets/text/nouns.txt')
     .then(file => file.text())
     .then(text => {return text.split('\n')});
-  const adjectivesFile = fetch('/assets/text/adjectives.txt')
+  const adjectivesFile = fetch('assets/text/adjectives.txt')
     .then(file => file.text())
     .then(text => {return text.split('\n')});
   Promise.all([nounsFile, adjectivesFile])
@@ -17,7 +17,6 @@ function processWords(data) {
   const nouns = data[0];
   const adjectives = data[1];
   $('.noun').each(function() {
-    console.log(this);
     $(this).html(nouns[randomIndex(nouns.length)]);
   });
   $('.adjective').each(function() {
