@@ -19,11 +19,11 @@ function processWords(data) {
   const adjectives = data[1];
   $('.noun').each(function() {
     const currentNoun = nouns[randomIndex(nouns.length)];
-    $(this).html(currentNoun).prop('href', `https://duckduckgo.com?q=!cambridge ${currentNoun}`);
+    $(this).html(currentNoun).prop('href', `https://duckduckgo.com?q=!mw ${currentNoun}`);
   });
   $('.adjective').each(function() {
     const currentAdjective = adjectives[randomIndex(adjectives.length)];
-    $(this).html(currentAdjective).prop('href', `https://duckduckgo.com?q=!cambridge ${currentAdjective}`);
+    $(this).html(currentAdjective).prop('href', `https://duckduckgo.com?q=!mw ${currentAdjective}`);
   });
 }
 
