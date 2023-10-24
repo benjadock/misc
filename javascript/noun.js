@@ -1,6 +1,10 @@
 $(function () {
+  // Initial words population
   getWords();
+  // Refresh words on header click
   $('.refresh').on('click', getWords);
+  // Refresh words on 'Enter'
+  document.onkeyup = function(event) { (event['code'] == 'Enter' ) && getWords(); };
 });
 
 function getWords() {
